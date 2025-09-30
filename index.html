@@ -57,7 +57,7 @@
       <h2>Cardápio</h2>
       <p class="muted">Tudo preparado na hora com ingredientes selecionados.</p>
       <div class="grid cards-3">
-        <article class="card product">
+        <article class="CartaoProduto">
           <div class="img">
             <img src="Image/latte.png" alt="Latte" loading="lazy">
           </div>
@@ -65,13 +65,13 @@
             <h3>Latte</h3>
             <p>Espresso duplo e leite cremoso vaporizado.</p>
             <div class="meta">
-              <span class="price">R$ 12,00</span>
-              <button class="btn add" data-add>Adicionar</button>
+              <span class="preço">R$ 12,00</span>
+              <button class="BotaoAdicionar" data-add>Adicionar</button>
             </div>
           </div>
         </article>
 
-        <article class="card product">
+        <article class="CartaoProduto">
           <div class="img">
             <img src="Image/bebidaespecial.png" alt="Aurora Sunset" loading="lazy">
           </div>
@@ -79,13 +79,13 @@
             <h3>Aurora Sunset</h3>
             <p>Uma explosão cítrica refrescante, combinando laranja vibrante com a suavidade cremosa do chantilly. Ideal para revigorar suas tardes com sabor e leveza.</p>
             <div class="meta">
-              <span class="price">R$ 14,00</span>
-              <button class="btn add" data-add>Adicionar</button>
+              <span class="preço">R$ 14,00</span>
+              <button class="BotaoAdicionar" data-add>Adicionar</button>
             </div>
           </div>
         </article>
 
-        <article class="card product">
+        <article class="CartaoProduto">
           <div class="img">
             <img src="Image/Cookie.png" alt="Cookie artesanal com gotas de chocolate" loading="lazy">
           </div>
@@ -93,14 +93,90 @@
             <h3>Cookie</h3>
             <p>Cookie artesanal com gotas de chocolate.</p>
             <div class="meta">
-              <span class="price">R$ 6,00</span>
-              <button class="btn add" data-add>Adicionar</button>
+              <span class="preço">R$ 6,00</span>
+              <button class="BotaoAdicionar" data-add>Adicionar</button>
             </div>
           </div>
         </article>
       </div>
     </div>
   </section>
+
+   <!-- Sobre -->
+  <section id="sobre" class="section alt">
+    <div class="container about">
+      <div class="CartaoInformacao">
+        <h2>Sobre nós</h2>
+        <p>Nascemos da paixão por café e por criar experiências aconchegantes. Selecionamos pequenos produtores e priorizamos práticas sustentáveis para levar até você uma xícara honesta e deliciosa.</p>
+        <ul class="checks">
+          <li>🌱 Grãos selecionados de fazendas parceiras</li>
+          <li>🥐 Padaria artesanal com fermentação natural</li>
+          <li>📶 Wi-Fi rápido e tomadas em todas as mesas</li>
+        </ul>
+      </div>
+      <div class="CartaoInformacao">
+        <h3>Horários</h3>
+        <p><strong>Seg–Sex:</strong> 8h–20h<br><strong>Sáb:</strong> 9h–18h<br><strong>Dom:</strong> 9h–14h</p>
+        <h3 class="mt">Endereço</h3>
+        <p>Rua dos Baristas, 123 — Centro, São Paulo/SP</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria -->
+
+<section id="galeria" class="section">
+  <div class="container">
+    <h2>Galeria</h2>
+    <div class="GaleriaToda">
+      <div class="tile">
+        <img src="Image/image1.png" alt="image 1" loading="lazy">
+      </div>
+      <div class="tile">
+        <img src="Image/image2.png" alt="image 2" loading="lazy">
+      </div>
+      <div class="tile">
+        <img src="Image/image3.png" alt="image 3" loading="lazy">
+      </div>
+      <div class="tile">
+        <img src="Image/cardapio.png" alt="Cardapio" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Contato -->
+  <section id="contato" class="section alt">
+    <div class="container contato">
+      <form class="card soft" id="contactForm">
+        <h2>Fale com a gente</h2>
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" required placeholder="Seu nome" />
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" rows="4" required placeholder="Como podemos ajudar?"></textarea>
+        <button class="BotaoPrimario" type="submit">Enviar mensagem</button>
+        <p class="hint">Respondemos em até 1 dia útil.</p>
+      </form>
+      <div class="CartaoInfo">
+        <h3>Contato</h3>
+        <p>📞 (11) 99999-0000<br>✉️ contato@caffeaurora.com</p>
+        <h3 class="mt">Siga nas redes</h3>
+        <p>Instagram · TikTok · Maps</p>
+      </div>
+    </div>
+  </section>
+
+  <!--Roda Pé-->
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Caffè Aurora — Feito com ❤ e café.</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">Mensagem enviada com sucesso!</div>
+
+  <script src="js/Script.js"></script>
 
     
 </body>
