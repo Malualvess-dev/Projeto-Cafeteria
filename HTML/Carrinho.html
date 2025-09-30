@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrinho • Caffè Aurora</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" href="/CSS/Carrinho.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="logo">☕</span><strong>Caffè Aurora</strong>
+      </a>
+      <nav class="main-nav">
+        <a href="/index.html">Cardápio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <div class="breadcrumbs">Início / <strong>Carrinho</strong></div>
+
+    <!-- Etapas -->
+    <div class="steps">
+      <div class="step active" data-step="1"><div class="num">1</div> Carrinho</div>
+      <div class="step" data-step="2"><div class="num">2</div> Endereço</div>
+      <div class="step" data-step="3"><div class="num">3</div> Pagamento</div>
+      <div class="step" data-step="4"><div class="num">4</div> Revisão</div>
+    </div>
+
+    <div class="layout">
+      <!-- Painéis das etapas -->
+      <section class="panel" id="pane-cart">
+        <h3>Itens no carrinho</h3>
+        <div id="cartList"></div>
+        <div class="actions">
+          <a class="btn ghost" href="/index.html">Continuar comprando</a>
+          <button class="BotaoPrimario" id="toAddress">Prosseguir para Endereço →</button>
+        </div>
+      </section>
+      
+
+      <section class="panel hidden" id="pane-address">
+        <h3>Endereço de entrega</h3>
+        <form class="form-grid" id="formAddress">
+          <div class="full">
+            <label for="nome">Nome completo</label>
+            <input id="nome" required>
+          </div>
+          <div><label for="cep">CEP</label><input id="cep" required></div>
+          <div><label for="numero">Número</label><input id="numero" required></div>
+          <div class="full"><label for="rua">Rua</label><input id="rua" required></div>
+          <div><label for="bairro">Bairro</label><input id="bairro" required></div>
+          <div><label for="cidade">Cidade</label><input id="cidade" required></div>
+          <div><label for="uf">UF</label><input id="uf" maxlength="2" required></div>
+          <div class="full"><label for="complemento">Complemento</label><input id="complemento"></div>
+        </form>
+        <div class="actions">
+          <button class="btn" data-back>← Voltar</button>
+          <button class="btn primary" id="toPayment">Prosseguir para Pagamento →</button>
+        </div>
+      </section>
+
+      <section class="panel hidden" id="pane-payment">
+        <h3>Forma de pagamento</h3>
+        <div class="payopts">
+          <button class="opt active" data-pay="pix">🔷 Pix</button>
+          <button class="opt" data-pay="card">💳 Cartão</button>
+          <button class="opt" data-pay="cash">💵 Dinheiro</button>
+        </div>
+        <div class="hr"></div>
+        <div id="pay-pix" class="pay-pane">Você pagará via Pix ao finalizar.</div>
+        <div id="pay-card" class="pay-pane hidden">
+          <input placeholder="Número do cartão">
+          <input placeholder="MM/AA">
+          <input placeholder="CVV">
+          <input placeholder="Nome impresso">
+        </div>
+        <div id="pay-cash" class="pay-pane hidden">
+          <label for="troco">Troco para quanto?</label>
+          <input id="troco" placeholder="Ex.: 50,00">
+        </div>
+        <div class="actions">
+          <button class="btn" data-back>← Voltar</button>
+          <button class="btn primary" id="toReview">Revisar pedido →</button>
+        </div>
+      </section>
+
+      <section class="panel hidden" id="pane-review">
+        <h3>Revisão e confirmação</h3>
+        <div id="reviewData"></div>
+        <div class="actions">
+          <button class="btn" data-back>← Voltar</button>
+          <button class="btn primary" id="confirmOrder">Confirmar pedido ✔</button>
+        </div>
+      </section>
+
+      <!-- Resumo -->
+      <aside class="panel summary">
+        <h3>Resumo</h3>
+        <div id="sum-rows"></div>
+        <div class="hr"></div>
+        <div class="row"><span>Subtotal</span><strong id="sum-sub">R$ 0,00</strong></div>
+        <div class="row"><span>Entrega</span><strong id="sum-ship">R$ 5,00</strong></div>
+        <div class="row total"><span>Total</span><strong id="sum-total">R$ 0,00</strong></div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="toast" class="toast">Atualizado!</div>
+  <script src="/JS/Carrinho.js" defer></script>
+</body>
