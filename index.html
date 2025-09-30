@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme = "light">
+<html lang="pt-br" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caffè Aurora — Seu café de todo dia</title>
-    <meta name="description" content="Cafeteria com cafés especiais, pães artesanais e um ambiente acolhedor." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caffè Aurora — Seu café de todo dia</title>
+  <meta name="description" content="Cafeteria com cafés especiais, pães artesanais e um ambiente acolhedor." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <!-- Header -->
-     <header class="site-Cabecalho">
-        <div class="container nav">
-            <a class="brand" href="#hero" aria-label="Voltar ao Topo">
-                 <span class="logo" aria-hidden="true">☕</span>
-                <strong>Caffè <span class="accent">Aurora</span></strong>
-            </a>
-            <button class="botao1" id="1" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav"></button>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#hero" aria-label="Voltar ao topo">
+        <span class="logo" aria-hidden="true">☕</span>
+        <strong>Caffè <span class="accent">Aurora</span></strong>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
         <span></span><span></span><span></span>
       </button>
       <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
@@ -26,23 +26,25 @@
         <a href="#sobre">Sobre</a>
         <a href="#galeria">Galeria</a>
         <a href="#contato">Contato</a>
-        <button id="TemaMudado" class="BotaoTema" type="button" aria-pressed="false">🌙 Tema</button>
-        <a id="CarrinhoBotao" class="BotaoCompra" href="HTML/Carrinho.html">
-            🧺 Carrinho <span id="Carrinho1" class="Quantidade">0</span>
+        <button id="themeToggle" class="btn ghost" type="button" aria-pressed="false">🌙 Tema</button>
+        <a id="cartBtn" class="btn" href="html/carrinho.html">
+            🧺 Carrinho <span id="cartCount" class="badge">0</span>
         </a>
-    </div>
-     </header>
 
-     <!-- Apresentação -->
-  <section id="Apresentacao" class="Apresentacao">
+        
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
     <div class="container hero-grid">
       <div class="hero-copy card soft">
         <p class="kicker">Bem-vinda(o) ao</p>
         <h1>Caffè Aurora</h1>
         <p>Grãos selecionados, pães de fermentação natural e um ambiente feito para conversar, estudar e criar. Experimente o <strong>Latte da Casa</strong> e o <strong>Cookie de Doce de Leite</strong>.</p>
         <div class="actions">
-          <a class="BotaoCardapio" href="#menu">Ver Cardápio</a>
-          <a class="BotaoFazer pedido" href="#contato">Fazer Pedido</a>
+          <a class="btn primary" href="#menu">Ver Cardápio</a>
+          <a class="btn" href="#contato">Fazer Pedido</a>
         </div>
       </div>
       <figure class="hero-visual card glossy" aria-label="Xícara de café quente">
@@ -52,12 +54,12 @@
   </section>
 
   <!-- Menu -->
-   <section id="menu" class="section">
+  <section id="menu" class="section">
     <div class="container">
       <h2>Cardápio</h2>
       <p class="muted">Tudo preparado na hora com ingredientes selecionados.</p>
       <div class="grid cards-3">
-        <article class="CartaoProduto">
+        <article class="card product">
           <div class="img">
             <img src="Image/latte.png" alt="Latte" loading="lazy">
           </div>
@@ -65,13 +67,13 @@
             <h3>Latte</h3>
             <p>Espresso duplo e leite cremoso vaporizado.</p>
             <div class="meta">
-              <span class="preço">R$ 12,00</span>
-              <button class="BotaoAdicionar" data-add>Adicionar</button>
+              <span class="price">R$ 12,00</span>
+              <button class="btn add" data-add>Adicionar</button>
             </div>
           </div>
         </article>
 
-        <article class="CartaoProduto">
+        <article class="card product">
           <div class="img">
             <img src="Image/bebidaespecial.png" alt="Aurora Sunset" loading="lazy">
           </div>
@@ -79,13 +81,13 @@
             <h3>Aurora Sunset</h3>
             <p>Uma explosão cítrica refrescante, combinando laranja vibrante com a suavidade cremosa do chantilly. Ideal para revigorar suas tardes com sabor e leveza.</p>
             <div class="meta">
-              <span class="preço">R$ 14,00</span>
-              <button class="BotaoAdicionar" data-add>Adicionar</button>
+              <span class="price">R$ 14,00</span>
+              <button class="btn add" data-add>Adicionar</button>
             </div>
           </div>
         </article>
 
-        <article class="CartaoProduto">
+        <article class="card product">
           <div class="img">
             <img src="Image/Cookie.png" alt="Cookie artesanal com gotas de chocolate" loading="lazy">
           </div>
@@ -93,8 +95,8 @@
             <h3>Cookie</h3>
             <p>Cookie artesanal com gotas de chocolate.</p>
             <div class="meta">
-              <span class="preço">R$ 6,00</span>
-              <button class="BotaoAdicionar" data-add>Adicionar</button>
+              <span class="price">R$ 6,00</span>
+              <button class="btn add" data-add>Adicionar</button>
             </div>
           </div>
         </article>
@@ -102,10 +104,10 @@
     </div>
   </section>
 
-   <!-- Sobre -->
+  <!-- Sobre -->
   <section id="sobre" class="section alt">
     <div class="container about">
-      <div class="CartaoInformacao">
+      <div class="card soft">
         <h2>Sobre nós</h2>
         <p>Nascemos da paixão por café e por criar experiências aconchegantes. Selecionamos pequenos produtores e priorizamos práticas sustentáveis para levar até você uma xícara honesta e deliciosa.</p>
         <ul class="checks">
@@ -114,7 +116,7 @@
           <li>📶 Wi-Fi rápido e tomadas em todas as mesas</li>
         </ul>
       </div>
-      <div class="CartaoInformacao">
+      <div class="card soft highlight">
         <h3>Horários</h3>
         <p><strong>Seg–Sex:</strong> 8h–20h<br><strong>Sáb:</strong> 9h–18h<br><strong>Dom:</strong> 9h–14h</p>
         <h3 class="mt">Endereço</h3>
@@ -128,7 +130,7 @@
 <section id="galeria" class="section">
   <div class="container">
     <h2>Galeria</h2>
-    <div class="GaleriaToda">
+    <div class="grid gallery">
       <div class="tile">
         <img src="Image/image1.png" alt="image 1" loading="lazy">
       </div>
@@ -145,19 +147,20 @@
   </div>
 </section>
 
- <!-- Contato -->
+
+  <!-- Contato -->
   <section id="contato" class="section alt">
-    <div class="container contato">
+    <div class="container contact">
       <form class="card soft" id="contactForm">
         <h2>Fale com a gente</h2>
         <label for="nome">Nome</label>
         <input id="nome" type="text" required placeholder="Seu nome" />
         <label for="mensagem">Mensagem</label>
         <textarea id="mensagem" rows="4" required placeholder="Como podemos ajudar?"></textarea>
-        <button class="BotaoPrimario" type="submit">Enviar mensagem</button>
+        <button class="btn primary" type="submit">Enviar mensagem</button>
         <p class="hint">Respondemos em até 1 dia útil.</p>
       </form>
-      <div class="CartaoInfo">
+      <div class="card soft info">
         <h3>Contato</h3>
         <p>📞 (11) 99999-0000<br>✉️ contato@caffeaurora.com</p>
         <h3 class="mt">Siga nas redes</h3>
@@ -165,8 +168,6 @@
       </div>
     </div>
   </section>
-
-  <!--Roda Pé-->
 
   <footer class="site-footer">
     <div class="container">
@@ -176,8 +177,6 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite">Mensagem enviada com sucesso!</div>
 
-  <script src="JS/Script.js"></script>
-
-    
+  <script src="js/Script.js"></script>
 </body>
 </html>
